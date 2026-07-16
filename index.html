@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio oficial del artista. Conoce su trayectoria, sobre él y sus próximas presentaciones.">
+    <title>Portafolio del Artista</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navegación Principal -->
+    <header>
+        <nav aria-label="Navegación principal del sitio">
+            <ul>
+                <li><a href="#bienvenida">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#trayectoria">Trayectoria</a></li>
+                <li><a href="#presentaciones">Próximas Presentaciones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal con Microdatos de Schema.org (Person) -->
+    <main itemscope itemtype="https://schema.org/Person">
+        
+        <!-- Sección 1: Bienvenida -->
+        <section id="bienvenida" class="seccion-pantalla" aria-label="Sección de bienvenida">
+            <div class="contenido">
+                <h1>Bienvenido al mundo de <span itemprop="name">Nombre de Tu Amigo</span></h1>
+                <p itemprop="jobTitle">Artista Multidisciplinario</p>
+                <p>Descubre el arte en su máxima expresión.</p>
+            </div>
+        </section>
+
+        <!-- Sección 2: Sobre Mí -->
+        <section id="sobre-mi" class="seccion-pantalla" aria-label="Acerca del artista">
+            <div class="contenido">
+                <h2>Sobre Mí</h2>
+                <p itemprop="description">Soy un apasionado creador buscando transmitir emociones a través de mi obra. Aquí puedes contar su historia, sus inspiraciones y lo que lo mueve a crear.</p>
+            </div>
+        </section>
+
+        <!-- Sección 3: Trayectoria -->
+        <section id="trayectoria" class="seccion-pantalla" aria-label="Trayectoria profesional">
+            <div class="contenido">
+                <h2>Trayectoria</h2>
+                <p>A lo largo de los años, he tenido el honor de llevar mi arte a diversos lugares.</p>
+                <ul>
+                    <li>Exposición "Colores del Alma" (2022)</li>
+                    <li>Ganador del Premio Regional de Artes (2023)</li>
+                    <li>Participación en el Festival Internacional (2024)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección 4: Próximas Presentaciones -->
+        <section id="presentaciones" class="seccion-pantalla" aria-label="Eventos y presentaciones futuras">
+            <div class="contenido">
+                <h2>Próximas Presentaciones</h2>
+                <p>¡Acompáñame en mis siguientes eventos!</p>
+                
+                <!-- Microdatos para Eventos -->
+                <article itemscope itemtype="https://schema.org/Event">
+                    <h3 itemprop="name">Gira Acústica Local</h3>
+                    <p>Fecha: <time itemprop="startDate" datetime="2026-08-15">15 de Agosto, 2026</time></p>
+                    <p>Lugar: <span itemprop="location">Teatro Principal</span></p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Portafolio del Artista. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
